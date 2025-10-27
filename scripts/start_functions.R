@@ -311,11 +311,6 @@ start_run <- function(cfg, scenario = NULL, codeCheck = TRUE, lock_model = TRUE,
     message("done.")
   }
 
-  # If available (i.e. paths are set) extract bioenergy and/or GHG prices 
-  # from REMIND report and save them to the respective input folders
-  # Please note: For them to be used by the model, either the 'coupling' scenario
-  # must be selected or the corresponding switches must be set individually.
-  getReportData(cfg$path_to_report_bioenergy, cfg$path_to_report_ghgprices)
 
   # update all parameters which contain the levels and marginals
   # of all variables and equations
@@ -359,6 +354,12 @@ start_run <- function(cfg, scenario = NULL, codeCheck = TRUE, lock_model = TRUE,
     # download data and update code
     download_and_update(cfg)
   }
+
+  # If available (i.e. paths are set) extract bioenergy and/or GHG prices 
+  # from REMIND report and save them to the respective input folders
+  # Please note: For them to be used by the model, either the 'coupling' scenario
+  # must be selected or the corresponding switches must be set individually.
+  getReportData(cfg$path_to_report_bioenergy, cfg$path_to_report_ghgprices)
 
   ###########################################################################################################
   ############# PROCESSING INPUT DATA ###################### END ############################################
@@ -595,6 +596,11 @@ getReportData <- function(path_to_report_bioenergy, path_to_report_ghgprices = N
     if (length(getNames(rep, dim = "scenario")) != 1) stop("getReportData: report contains more or less than 1 scenario.")
     mag <- collapseNames(rep) # get rid of scenario and model dimension if they exist
 
+    # Keep native model regions only and remove aggregated regions
+    load("input/spatial_header.rda")
+    regions <- as.character(unique(map$RegionCode))
+    mag <- mag[regions,,]
+    
     if(!("y1995" %in% getYears(mag))){
       empty95 <- mag[, 1,]
       empty95[,,] <- 0
