@@ -7,7 +7,7 @@
 
 scalars 
  s44_bii_target         Target value for BII in target year (1)                 / 0 /
- c44_bii_decrease       Implementation of target for BII (binary)               / 1 /
+ c44_bii_decrease       Implementation of target for BII (binary)               / 0 /
  s44_target_year        Year in which the BII target is reached  (1)           / 2100 /
  s44_start_year         Start year for interpolation towards BII target (1)    / 2030 /
  s44_cost_bii_missing   Technical costs for missing BII increase (USD17MER per unit of BII)  / 1e+06 /

@@ -179,9 +179,9 @@ $offlisting
 **************************MODEL SPECIFIC SCALARS********************************
 *                    Key parameters during model runs
 
-$setglobal c_timesteps  coup2100
+$setglobal c_timesteps  less_TS
 $setglobal c_past  till_2015
-$setglobal c_title  default
+$setglobal c_title  C_unsustainableREMIND_rc30_2026-08-01_02p15.38-mag-4
 
 scalars
 s_use_gdx   use of gdx files                                       / 0 /
@@ -194,7 +194,7 @@ $setglobal drivers  aug17
 $setglobal land  landmatrix_dec18
 $setglobal costs  default
 $setglobal interest_rate  select_apr20
-$setglobal tc  endo_global_may26
+$setglobal tc  endo_jan22
 $setglobal yields  managementcalib_aug19
 
 $setglobal food  anthro_iso_jun22
@@ -221,7 +221,7 @@ $setglobal natveg  pot_forest_may24
 $setglobal employment  exo_may22
 $setglobal labor_prod  off
 $setglobal factor_costs  sticky_feb18
-$setglobal landconversion  calib_tc_cost
+$setglobal landconversion  calib
 
 $setglobal transport  gtap_nov12
 $setglobal area_equipped_for_irrigation  endo_apr13

@@ -6,7 +6,7 @@
 *** |  Contact: magpie@pik-potsdam.de
 $setglobal c32_aff_mask  noboreal
 * options: unrestricted, noboreal, onlytropical
-$setglobal c32_aff_policy  npi
+$setglobal c32_aff_policy  ndc
 * options: none, npi, ndc, affexp, ndcdelay
 $setglobal c32_aff_bgp  nobgp
 * options: ann,nobgp

@@ -41,6 +41,7 @@ gms$s29_snv_scenario_target;;;;;;;;;;;;2050;2070;;;;;;;;;;;;;;;;;;;;;;;;;;
 gms$s29_treecover_plantation;;;;;;;;;;;;;;;;;;0;1;;;;;;;;;;;;;;;;;;;;
 gms$s29_treecover_bii_coeff;;;;;;;;;;;;;;;;;;0;1;;;;;;;;;;;;;;;;;;;;
 gms$c30_bioen_water;;;;rainfed;rainfed;rainfed;rainfed;rainfed;rainfed;all;rainfed;rainfed;rainfed;;;;;;;;;;;;;;;;;;;;;;;;;;
+gms$s30_kbe_rotation_max_shr;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 gms$s32_initial_distribution;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1;1;0;;;;;;
 gms$s32_hvarea;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2;1;0;;;;;;
 gms$s32_aff_plantation;;;;0;0;0;0;0;0;1;0;0;0;;;;;0;1;;;;;;;;;;;;;;;;;;;;
